@@ -4,7 +4,7 @@
 Please note that **SMURF** is designed to assess the similarity between rearrangements—either simple or complex—that are derived from a *single* event, such as a simple translocation, chromothripsis, or chromoplexy.
 
 ## Application
-![app](application.png)
+![app](image/application.png)
 This example demonstrates how SMURF clusters *ALK rearrangements* based on their genomic features.  
   
 **SMURF workflow:**  
@@ -61,6 +61,7 @@ python main.py -i input_sv.tsv -s sample_id -r reference.fasta -v hg38 \
 | `--min_seg_size` | `20` | Segments smaller than this are automatically considered duplication bridges. |
 | `--insert_size` | `500` | Insert size of paired-end reads. Segments smaller than this are checked in BAM/CRAM for duplication bridges. |
 #### * Output
+![sol](image/solution.png)
 - `solution.tsv`: TSV file containing one or more candidate solutions for each chromosome, with columns `#chrom`, `start`, `end`, and `copy_number`.  
 - `solution.pdf`: Visual representation of all candidate solutions.  
 - `decision.tsv`: TSV file recording the most plausible solution for each chromosome, with columns `#chrom` and `solution`.
@@ -77,6 +78,7 @@ python summary.py -i input_directory/ -c chrN
 | `-c`, `--chrA` | **Required** | Chromosome of interest (e.g., `chr2`). |
 | `-o`, `--outdir` | Current directory | Output directory (default: current directory). |
 #### * Output
+![sum](image/summary.png)
 - `summary.tsv`: TSV file where rows represent copy numbers and columns represent segment sizes.  
 - `summary.pdf`: Visual representation of the data in `summary.tsv`.
   
