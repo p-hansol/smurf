@@ -4,7 +4,7 @@
 Please note that **SMURF** is designed to assess the similarity between rearrangements—either simple or complex—that are derived from a *single* event, such as a simple translocation, chromothripsis, or chromoplexy.
 
 ## Application
-[figure]
+![app](application.png)
 This example demonstrates how SMURF clusters *ALK rearrangements* based on their genomic features.  
   
 **SMURF workflow:**  
